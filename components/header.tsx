@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { APP_STORE_URL } from "@/lib/constants"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
@@ -37,8 +38,10 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6">
-              Download App
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6" asChild>
+              <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+                Download App
+              </a>
             </Button>
           </div>
 
@@ -84,8 +87,10 @@ export function Header() {
               >
                 FAQ
               </Link>
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full w-full">
-                Download App
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full w-full" asChild>
+                <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+                  Download App
+                </a>
               </Button>
             </div>
           </div>

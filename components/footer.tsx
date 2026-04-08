@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { APP_STORE_URL } from "@/lib/constants"
 
 export function Footer() {
   return (
@@ -21,6 +22,16 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-3">
+              <li>
+                <a
+                  href={APP_STORE_URL}
+                  className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download
+                </a>
+              </li>
               <li>
                 <Link href="#features" className="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors">
                   Features
